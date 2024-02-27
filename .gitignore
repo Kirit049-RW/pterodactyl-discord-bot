@@ -1,6 +1,4 @@
 node_modules/*
 /.idea/
-*.sqlite
 *.json
-*.log
 package-lock.json

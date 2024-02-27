@@ -1,0 +1,35 @@
+{
+    "serverIdDeploySlash": "",
+    "database": {
+        "client": "mysql",
+        "connection": {
+            "host": "",
+            "port": "3306",
+            "user": "",
+            "password": "",
+            "database": "",
+            "charset": "utf8mb4"
+        },
+        "pool": {
+            "min": 0,
+            "max": 7
+        }
+    },
+    "monitoringBot": {
+        "channelId": "",
+        "roleId": ""
+    },
+    "pterodactyl": {
+        "ip": "",
+        "url": "https://panel.xxx.com",
+        "apiKeyApp": "ptla_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "apiKeyClient": "ptlc_XXXXXXXXXXXXXXXXXXXXXXXX",
+        "host": "sftp://xxx.com:2022",
+        "port": "2022",
+        "nodeId": 0,
+        "nestId": 0,
+        "eggJavascriptId": "0",
+        "eggJavaId": "0",
+        "eggPythonId": "0"
+    }
+}
