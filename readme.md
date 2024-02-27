@@ -37,9 +37,8 @@ Additionally, you can monitor the status of bots:
 
 ---
 ### Configuration
-File `.env`
+File `.env` : rename the file `.env.example` to `.env`
 
-- Rename the file `.env.example` to `.env`
 - `TOKEN`: Bot token
 - `DEPLOY_SLASH`: Allows you to deploy slash commands
 
