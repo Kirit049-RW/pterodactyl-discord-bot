@@ -49,7 +49,7 @@ File `config.json`
 
 Please complete the various fields.
 
-For the application key, you have to follow this image :
+For the apiKeyApp, you have to follow this image to get the correct permissions:
 
 ![Application permissions](https://github.com/Kirit049-RW/pterodactyl-discord-bot/assets/78322918/8f5271bc-bddb-481a-b1b5-5587a449f4b4)
 
