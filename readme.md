@@ -48,6 +48,11 @@ Example : `DEPLOY_SLASH=false` ou `DEPLOY_SLASH=true`
 File `config.json`
 
 Please complete the various fields.
+
+For the application key, you have to follow this image :
+
+![Application permissions](https://github.com/Kirit049-RW/pterodactyl-discord-bot/assets/78322918/8f5271bc-bddb-481a-b1b5-5587a449f4b4)
+
 ````json
 {
     "serverIdDeploySlash": "Id of the server where the slash commands will be deployed",
