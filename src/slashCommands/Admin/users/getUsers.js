@@ -1,7 +1,7 @@
 const SlashCommand = require('../../../managers/structures/SlashCommands.js');
 const { EmbedBuilder, StringSelectMenuBuilder } = require('discord.js');
 
-module.exports = class GetAllUsers extends SlashCommand {
+module.exports = class GetUsers extends SlashCommand {
     constructor(handler) {
         super(handler,{
             name: 'get-users',
@@ -145,7 +145,7 @@ module.exports = class GetAllUsers extends SlashCommand {
                     .addFields(servers.map((server) => {
                         return {
                             name: `${server.attributes.name}`,
-                            value: `Id : \`${server.attributes.id}\`\nSuspendu : ${server.attributes.suspended ?ctx.emojiSuccess:ctx.emojiError}\nAccès au serveur : \`${server.attributes.user}\` ${server.attributes.user>1?"personnes":"personne"}\nDatabase : \`${server.attributes.feature_limits.databases}\`\nBackup : \`${server.attributes.feature_limits.backups}\`\nRAM : \`${server.attributes.limits.memory} MB\`\nDisque : \`${server.attributes.limits.disk} MB\`\nCrée : <t:${Math.round(new Date(server.attributes.created_at).getTime()/ 1000).toFixed()}:d>`,
+                            value: `Id : \`${server.attributes.id}\`\nSuspendu : ${server.attributes.suspended ?ctx.emojiSuccess:ctx.emojiError}\nDatabase : \`${server.attributes.feature_limits.databases}\`\nBackup : \`${server.attributes.feature_limits.backups}\`\nRAM : \`${server.attributes.limits.memory} MB\`\nDisque : \`${server.attributes.limits.disk} MB\`\nCrée : <t:${Math.round(new Date(server.attributes.created_at).getTime()/ 1000).toFixed()}:d>`,
                             inline: true
                         }
                     }))
