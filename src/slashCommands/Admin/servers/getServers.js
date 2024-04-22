@@ -1,7 +1,7 @@
 const SlashCommand = require('../../../managers/structures/SlashCommands.js');
 const { EmbedBuilder } = require('discord.js');
 
-module.exports = class GetAllServers extends SlashCommand {
+module.exports = class GetServers extends SlashCommand {
     constructor(handler) {
         super(handler,{
             name: 'get-servers',
