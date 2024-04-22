@@ -30,7 +30,7 @@ module.exports = class GetAllServers extends SlashCommand {
             .addFields(serversList.map((server) => {
                 return {
                     name: `${server.attributes.name}`,
-                    value: `Discord : ${linkUsersToDiscord[serversList.indexOf(server)]}\nUsername : **${server.attributes.relationships.user.attributes.username}**\nPtero Id : \`${server.attributes.id}\`\nSuspendu : ${server.attributes.suspended ?ctx.emojiSuccess:ctx.emojiError}\nAccès au serveur : \`${server.attributes.user}\` ${server.attributes.user>1?"personnes":"personne"}\nDatabase : \`${server.attributes.feature_limits.databases}\`\nBackup : \`${server.attributes.feature_limits.backups}\`\nRAM : \`${server.attributes.limits.memory} MB\`\nDisque : \`${server.attributes.limits.disk} MB\`\nCrée : <t:${Math.round(new Date(server.attributes.created_at).getTime()/ 1000).toFixed()}:d>`,
+                    value: `Discord : ${linkUsersToDiscord[serversList.indexOf(server)]}\nUsername : **${server.attributes.relationships.user.attributes.username}**\nPtero Id : \`${server.attributes.id}\`\nSuspendu : ${server.attributes.suspended ?ctx.emojiSuccess:ctx.emojiError}\nDatabase : \`${server.attributes.feature_limits.databases}\`\nBackup : \`${server.attributes.feature_limits.backups}\`\nRAM : \`${server.attributes.limits.memory} MB\`\nDisque : \`${server.attributes.limits.disk} MB\`\nCrée : <t:${Math.round(new Date(server.attributes.created_at).getTime()/ 1000).toFixed()}:d>`,
                     inline: true
                 }
             }))
@@ -60,7 +60,7 @@ module.exports = class GetAllServers extends SlashCommand {
         else {
             msg = await ctx.send({
                 embeds: [await this.mainEmbed(ctx, serversList[page - 1], servers.length, usersDatabase)],
-                components: ctx.messageFormatter.pages(`Page ${page}/${servers.length}`, page, serversList.length)
+                components: ctx.messageFormatter.pages(`Page ${page}/${serversList.length}`, page, serversList.length)
             });
 
             const collectorSendButton = msg.createMessageComponentCollector({ filter, idle: 5 * 60 * 1000, componentType: 2});
@@ -73,7 +73,7 @@ module.exports = class GetAllServers extends SlashCommand {
 
                 return msg.edit({
                     embeds: [await this.mainEmbed(ctx, serversList[page - 1], servers.length, usersDatabase)],
-                    components: ctx.messageFormatter.pages(`Page ${page}/${servers.length}`, page, serversList.length)
+                    components: ctx.messageFormatter.pages(`Page ${page}/${serversList.length}`, page, serversList.length)
                 }).catch(() => null);
             });
 
