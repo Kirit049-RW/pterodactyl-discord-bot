@@ -30,7 +30,7 @@ module.exports = class SlashCommandsHandler {
             type: command.type,
             dm_permission: command.dm_permission,
             default_member_permissions: bit !== "0" ? bit : null,
-            options: command.options,
+            options: command.options
         }
     }
 
