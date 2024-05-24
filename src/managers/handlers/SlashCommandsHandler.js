@@ -38,7 +38,7 @@ module.exports = class SlashCommandsHandler {
         const guild = this.client.guilds.cache.get(this.client.config["serverIdDeploySlash"]);
         if (!guild) return console.log(chalk.red(`Impossible de trouver le serveur ${this.client.config["serverIdDeploySlash"]} !`));
 
-        const rest = new REST({ version: '10' }).setToken(process.env.DEV_TOKEN);
+        const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
         await (async () => {
             try {
